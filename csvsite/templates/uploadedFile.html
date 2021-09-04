@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div class="row">
+    <h1>tyuiop</h1>
+    
+    <div class="">
+      <table>
+        <thead>
+          <tr>
+            <th>Invoice Number</th>
+            <th>Stock Code</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Invoice Date</th>
+            <th>Unit Price</th>
+            <th>Customer ID</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        {% for invoice in invoice %}
+        <tbody>
+        <tr>
+          <td>{{invoice.invoice_no}}</td>
+          <td>{{invoice.stock_code}}</td>
+          <td>{{invoice.description}}</td>
+          <td>{{invoice.quantity}}</td>
+          <td>{{invoice.invoice_date}}</td>
+          <td>{{invoice.unit_price}}</td>
+          <td>{{invoice.customer_id}}</td>
+          <td>{{invoice.country}}</td>
+        </tr>
+      </tbody>
+        {% endfor %}
+      </table>
+
+
+
+
+      
+        
+    </div>
+</div>
+{% endblock %}

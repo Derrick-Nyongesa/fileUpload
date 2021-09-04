@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="bg-info text-white">
+    <div class="container">
+        <h1 >Upload a File</h1><br><br>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form%}
+            <input type="submit" class="btn btn-lg btn-outline-danger" value="Submit">
+        </form>
+    </div>
+</div><br><br>
+
+{% endblock %}
